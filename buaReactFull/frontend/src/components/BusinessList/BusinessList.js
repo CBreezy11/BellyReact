@@ -1,23 +1,23 @@
 import React from 'react';
-import './BusinessList.css';
-import Business from '../Business/Business';
+import './ResultList.css';
+import Result from '../Business/Result';
 import TicketInfo from '../TicketInfo/TicketInfo';
 
-class BusinessList extends React.Component {
-    display(business) {
-        if (this.props.businesses.sortby === 'show_data') {
-            return <Business business={business} key={business.id} />
+class ResultList extends React.Component {
+    display(result) {
+        if (this.props.results.sortby === 'show_data') {
+            return <Result result={result} key={result.id} />
         } else {
-            return <TicketInfo business={business} key={business.id} />
+            return <TicketInfo result={result} key={result.id} />
         }
     }
 
     render() {
         return (
-            <div className="BusinessList" >
+            <div className="ResultList" >
                 {
-                    this.props.businesses.businesses.map(business => {
-                        return this.display(business)
+                    this.props.results.results.map(result => {
+                        return this.display(result)
                     })
                 }
             </div>
@@ -25,4 +25,4 @@ class BusinessList extends React.Component {
         )
     }
 }
-export default BusinessList;
+export default ResultList;
