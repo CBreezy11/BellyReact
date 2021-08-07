@@ -13,9 +13,9 @@ class App extends React.Component {
       businesses: [],
       sortby: ''
     }
-    this.searchYelp = this.searchYelp.bind(this)
+    this.searchDB = this.searchDB.bind(this)
   }
-  async searchYelp(searchObject) {
+  async searchDB(searchObject) {
     this.setState({ sortby: searchObject.sortBy })
     const requestOptions = {
       method: 'POST',
@@ -43,12 +43,12 @@ class App extends React.Component {
         <h1>
           <img src={logo} className="App-logo" alt="logo" />
         </h1>
-        <p style={{ color: "#c9b92f" }}>Very ugly but works most of the time.  For Show Data: enter any part of the billing, preferably the date in mm/dd/yy format to get
+        <p style={{ color: "#c9b92f" }}>Very ugly but works.  For Show Data: enter any part of the billing, preferably the date in mm/dd/yy format to get
           the exact show.  If you don't know the date type in a search word of the bill and then you can see all the shows and get the date and
-          type in the date from there.  For Customer Lookup: type in the customer name, you must have first and last with correct spelling.  Work in progress, IF YOU GET ERROR ON INITIAL CUSTOMER SEARCH, refresh and try once more, styling is horrific yes
+          type in the date from there.  For Customer Lookup: not currently working, turned off those resources in AWS.  Work in progress, styling is horrific yes
           I know, very new to css language.
         </p>
-        <SearchBar searchYelp={this.searchYelp} />
+        <SearchBar searchDB={this.searchDB} />
         <BusinessList businesses={this.state} />
       </div>
     )
