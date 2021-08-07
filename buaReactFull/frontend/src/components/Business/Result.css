@@ -1,4 +1,4 @@
-.Business {
+.Result {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -7,47 +7,47 @@
   color: rgba(27, 31, 238, 0.973);
 } 
 
-.Business .image-container {
+.Result .image-container {
   height: 16.66rem;
   margin-bottom: 1rem;
 }
  
-.Business h2 {
+.Result h2 {
   margin-bottom: .5rem;
   font-size: 1.2rem;
   font-weight: 600;
 }
 
-.Business-information {
+.Result-information {
   display: flex;
   justify-content: space-between;
 }
 
-.Business-information p {
+.Result-information p {
   font-size: .88rem;
   font-weight: 300;
   line-height: 1rem;
 }
 
-.Business-address {
+.Result-details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.Business-reviews {
+.Result-zip {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: right;
 }
 
-.Business-reviews h3 {
+.Result-zip h3 {
   color: rgba(27, 31, 238, 0.973);
   font-weight: 600;
 }
 
-.Business-reviews .rating {
+.Result-zip .rating {
   font-size: .88rem;
   line-height: 1rem;
   color:  rgba(27, 31, 238, 0.973);
