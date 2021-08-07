@@ -1,17 +1,17 @@
 import React from 'react';
-import './Business.css';
+import './Result.css';
 
 
 
-class Business extends React.Component {
+class Result extends React.Component {
     render() {
         return (
-            <div className="Business">
-                <h2>{this.props.business.show}</h2>
-                <div className="Business-information">
-                    <div className="Business-address">
+            <div className="Result">
+                <h2>{this.props.result.show}</h2>
+                <div className="Result-information">
+                    <div className="Result-details">
                         {
-                            this.props.business.ticketInfo.map(ticket => {
+                            this.props.result.ticketInfo.map(ticket => {
                                 return <p>
                                     <p className="ticketType">Ticket: {ticket.type}</p>
                                     <p>Price: {ticket.price}</p>
@@ -22,11 +22,11 @@ class Business extends React.Component {
                         }
 
                     </div>
-                    <div className="Business-reviews">
+                    <div className="Result-zip">
                         <h3>Zip Report</h3>
                         <h3 className="rating">
                             {
-                                this.props.business.zipInfo.map(zip => {
+                                this.props.result.zipInfo.map(zip => {
                                     return <p>
                                         <p className="ticketType">{zip.location}</p>
                                         <p>Count: {zip.quantity}</p>
@@ -41,4 +41,4 @@ class Business extends React.Component {
         )
     }
 };
-export default Business;
+export default Result;
