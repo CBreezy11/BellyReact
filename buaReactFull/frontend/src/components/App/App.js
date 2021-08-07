@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import logo from './BUA_FULL_B_LOGO.gif'
 import SearchBar from '../SearchBar/SearchBar';
-import BusinessList from '../BusinessList/BusinessList';
+import ResultList from '../BusinessList/ResultList';
 
 
 
@@ -10,7 +10,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      businesses: [],
+      results: [],
       sortby: ''
     }
     this.searchDB = this.searchDB.bind(this)
@@ -31,7 +31,7 @@ class App extends React.Component {
         console.log('Response: ', response)
         return response.json()
       }).then(jsonResponse => {
-        this.setState({ businesses: jsonResponse })
+        this.setState({ results: jsonResponse })
       })
 
 
@@ -49,7 +49,7 @@ class App extends React.Component {
           I know, very new to css language.
         </p>
         <SearchBar searchDB={this.searchDB} />
-        <BusinessList businesses={this.state} />
+        <ResultList results={this.state} />
       </div>
     )
   }
